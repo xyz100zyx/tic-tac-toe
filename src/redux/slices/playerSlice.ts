@@ -11,6 +11,13 @@ const playerSlice = createSlice({
     reducers: {
         addPlayer: (state, action) => {
             state.players.push({name: action.payload, score: 0});
+        },
+        incScore: (state, action) => {
+            state.players.map((player) => {
+                if (player.name === action.payload){
+                    player.score = Number(player.score)+1;
+                }
+            })
         }
     }
 })

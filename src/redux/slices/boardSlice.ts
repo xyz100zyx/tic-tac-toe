@@ -1,6 +1,5 @@
 import {createSlice} from "@reduxjs/toolkit";
-import {checkFinish, insertSymbol} from "../../controller/controllers";
-import {useDispatch} from "react-redux";
+import {checkWinner, insertSymbol} from "../../controller/controllers";
 
 const initialState = {
     board: [
@@ -8,7 +7,7 @@ const initialState = {
         [null, null, null],
         [null, null, null]
     ] as Array<Array<String | null>>,
-    currentSymbol: 'x'
+    currentSymbol: 'x',
 }
 
 const boardSlice = createSlice({
@@ -19,7 +18,7 @@ const boardSlice = createSlice({
             if (insertSymbol(action.payload, state.board)){
                 state.board[Number(action.payload[0][0])][Number(action.payload[0][1])] = state.currentSymbol;
                 state.currentSymbol = state.currentSymbol === 'x' ? 'o' : 'x';
-                checkFinish(state.board)
+                checkWinner(state.board)
             }
         }
     }

@@ -16,7 +16,7 @@ export const insertSymbol = (position: String, boardState: Array<Array<String | 
     return boardState[row][column] === null
 }
 
-export const checkFinish = (boardState: Array<Array<String | null>>) => {
+export const checkWinner = (boardState: Array<Array<String | null>>) => {
     if (
         ((boardState[0][0] === boardState[0][1]) && (boardState[0][1] === boardState[0][2]) && (boardState[0][2] === 'x')) ||
         ((boardState[1][0] === boardState[1][1]) && (boardState[1][1] === boardState[1][2]) && (boardState[1][2] === 'x')) ||
