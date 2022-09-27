@@ -1,0 +1,15 @@
+.button{
+  border: none;
+  background-color: darkorange;
+  color: #000;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 20px 50px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+
+  &:hover{
+    transform: scale(1.2);
+  }
+}

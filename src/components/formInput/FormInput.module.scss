@@ -1,0 +1,20 @@
+.input{
+  padding: 10px 5px;
+  width: 250px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  text-align: center;
+
+  &::placeholder{
+    font-size: 18px;
+    color: #b1c0c1;
+  }
+
+  &:focus{
+    border: 2px solid #b1c0c1;
+    transition: border .2s ease, width .3s ease-in;
+    width: 300px;
+  }
+
+}
