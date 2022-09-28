@@ -30,14 +30,20 @@ export const checkWinner = (boardState: Array<Array<String | null>>) => {
         ((boardState[1][0] === boardState[1][1]) && (boardState[1][1] === boardState[1][2]) && (boardState[1][2] === 'x')) ||
         ((boardState[2][0] === boardState[2][1]) && (boardState[2][1] === boardState[2][2]) && (boardState[2][2] === 'x')) ||
         ((boardState[0][0] === boardState[1][1]) && (boardState[1][1] === boardState[2][2]) && (boardState[2][2] === 'x')) ||
-        ((boardState[2][0] === boardState[1][1]) && (boardState[1][1] === boardState[0][2]) && (boardState[0][2] === 'x'))
+        ((boardState[2][0] === boardState[1][1]) && (boardState[1][1] === boardState[0][2]) && (boardState[0][2] === 'x')) ||
+        ((boardState[0][0] === boardState[1][0]) && (boardState[1][0] === boardState[2][0]) && (boardState[2][0] === 'x')) ||
+        ((boardState[0][1] === boardState[1][1]) && (boardState[1][1] === boardState[2][1]) && (boardState[2][1] === 'x')) ||
+        ((boardState[0][2] === boardState[1][2]) && (boardState[1][2] === boardState[2][2]) && (boardState[2][2] === 'x'))
     ){return 'x'}
     else if (
         ((boardState[0][0] === boardState[0][1]) && (boardState[0][1] === boardState[0][2]) && (boardState[0][2] === 'o')) ||
         ((boardState[1][0] === boardState[1][1]) && (boardState[1][1] === boardState[1][2]) && (boardState[1][2] === 'o')) ||
         ((boardState[2][0] === boardState[2][1]) && (boardState[2][1] === boardState[2][2]) && (boardState[2][2] === 'o')) ||
         ((boardState[0][0] === boardState[1][1]) && (boardState[1][1] === boardState[2][2]) && (boardState[2][2] === 'o')) ||
-        ((boardState[2][0] === boardState[1][1]) && (boardState[1][1] === boardState[0][2]) && (boardState[0][2] === 'o'))
+        ((boardState[2][0] === boardState[1][1]) && (boardState[1][1] === boardState[0][2]) && (boardState[0][2] === 'o')) ||
+        ((boardState[0][0] === boardState[1][0]) && (boardState[1][0] === boardState[2][0]) && (boardState[2][0] === 'o')) ||
+        ((boardState[0][1] === boardState[1][1]) && (boardState[1][1] === boardState[2][1]) && (boardState[2][1] === 'o')) ||
+        ((boardState[0][2] === boardState[1][2]) && (boardState[1][2] === boardState[2][2]) && (boardState[2][2] === 'o'))
     ){return 'o'}
     else if(countNull <= 0){
         return '-'
