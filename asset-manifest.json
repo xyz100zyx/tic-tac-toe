@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/tic-tac-toe/static/css/main.29c22b06.css",
+    "main.js": "/tic-tac-toe/static/js/main.58823e80.js",
+    "static/media/circle-outline-svgrepo-com.svg": "/tic-tac-toe/static/media/circle-outline-svgrepo-com.19f679395507e9a2b3d8.svg",
+    "index.html": "/tic-tac-toe/index.html",
+    "static/media/icons8-close-250.svg": "/tic-tac-toe/static/media/icons8-close-250.f936d4979892c8a4c5ad.svg",
+    "main.29c22b06.css.map": "/tic-tac-toe/static/css/main.29c22b06.css.map",
+    "main.58823e80.js.map": "/tic-tac-toe/static/js/main.58823e80.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.29c22b06.css",
+    "static/js/main.58823e80.js"
+  ]
+}
