@@ -15,3 +15,14 @@
   }
 
 }
+
+@media screen and (max-width: 398px) {
+  .popup{
+
+    &__container{
+      width: 300px;
+      padding: 20px;
+    }
+
+  }
+}

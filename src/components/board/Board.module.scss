@@ -3,4 +3,23 @@
   display: flex;
   margin: 0 auto;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media screen and (max-width: 767px){
+  .board{
+    max-width: 560px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .board{
+    max-width: 380px;
+  }
+}
+
+@media screen and (max-width: 398px) {
+  .board{
+    max-width: 320px;
+  }
 }

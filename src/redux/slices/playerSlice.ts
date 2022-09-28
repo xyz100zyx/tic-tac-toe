@@ -2,7 +2,7 @@ import {createSlice} from "@reduxjs/toolkit";
 
 
 const initialState = {
-    players: Array<{name:String, score: Number}>(0)
+    players: Array<{name:String, score: 0}>(0)
 }
 
 const playerSlice = createSlice({
@@ -13,14 +13,12 @@ const playerSlice = createSlice({
             state.players.push({name: action.payload, score: 0});
         },
         incScore: (state, action) => {
-            state.players.map((player) => {
-                if (player.name === action.payload){
-                    player.score = Number(player.score)+1;
-                }
+            state.players.map(player => {
+                if (player.name === action.payload) player.score++;
             })
         }
     }
 })
 
-export const {addPlayer} = playerSlice.actions;
+export const {addPlayer, incScore} = playerSlice.actions;
 export default playerSlice.reducer;

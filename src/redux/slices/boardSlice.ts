@@ -8,6 +8,7 @@ const initialState = {
         [null, null, null]
     ] as Array<Array<String | null>>,
     currentSymbol: 'x',
+    winState: ''
 }
 
 const boardSlice = createSlice({
@@ -18,7 +19,15 @@ const boardSlice = createSlice({
             if (insertSymbol(action.payload, state.board)){
                 state.board[Number(action.payload[0][0])][Number(action.payload[0][1])] = state.currentSymbol;
                 state.currentSymbol = state.currentSymbol === 'x' ? 'o' : 'x';
-                checkWinner(state.board)
+                state.winState = checkWinner(state.board);
+                if (state.winState === 'x' || state.winState === 'o' || state.winState === '-'){
+                    state.board = [
+                        [null, null, null],
+                        [null, null, null],
+                        [null, null, null]
+                    ];
+                    state.currentSymbol = 'x';
+                }
             }
         }
     }
